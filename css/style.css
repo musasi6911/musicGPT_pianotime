@@ -1,0 +1,329 @@
+@import url('reset.css');
+
+body{
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+/* ---------------- Navigation -------------- */
+nav{
+  background-color: #333;
+  flex-basis: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.home-user{
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.home-user img{
+  width: 100%;
+}
+
+.home-logo{
+  margin-bottom: 50px;
+}
+
+.home-logo img{
+  width: 50px;
+}
+
+.home-nav{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-nav li{
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* .home-nav li:first-child::before{
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: transparent transparent transparent #333;
+  position: absolute;
+  right: -35px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+} */
+
+/* .home-nav li:last-child{
+  margin-top: auto;
+} */
+
+.home-nav li a{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.home-nav li a span{
+  font-size: 32px;
+}
+
+.home-nav li img{
+  width: 30px;
+}
+
+
+/* ---------------- Sub Menu -------------- */
+.sub-menu{
+  flex-basis: 300px;
+  background-color: #f6f6f6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sub-menu ul{}
+
+.sub-menu li{
+  margin-bottom: 10px;
+}
+
+.sub-menu button{
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 260px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 2.6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sub-menu button:hover{
+  background-color: #f6f6f6;
+  border-color: #999;
+}
+
+/* ---------------- Main -------------- */
+main{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-info{
+  flex-grow: 1;
+  position: relative;
+}
+
+.main-info > img{
+  display: block;
+  width: 100px;
+  margin: 50px auto;
+}
+
+.main-info h1{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.main-info p{
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-info p img{
+  width: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -40px;
+}
+
+.powerby{
+  position: absolute;
+  right: 30px;
+  bottom: 110px;
+  font-size: 13px;
+}
+
+.powerby img{
+  height: 20px;
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+}
+
+/* ---------- Chat ---------- */
+.main-chat{
+  height: 100px;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 80px);
+}
+
+.main-chat input{
+  /* width: 90%; */
+  flex-grow: 1;
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  background-color: #f6f6f6;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.main-chat input::placeholder{
+  font-family: 'Raleway', sans-serif;
+  color: #999;
+}
+
+.main-chat i{
+  position: absolute;
+  right: 50px;
+  cursor: pointer;
+}
+
+.main-chat i:hover{
+  color: #c10d22;
+}
+
+/* ---------------- Resault -------------- */
+.qu{
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.qu-main{
+  width: 48rem;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.qu img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.ans{
+  display: flex;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.ans-main{
+  width: 48rem;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.ans-main img{
+  height: 100px;
+  cursor: pointer;
+}
+
+.ans-main span{
+  font-size: 48px;
+  margin-right: 20px;
+}
+
+.ans-main audio{
+  display: none;
+}
+
+.backbtn{
+  display: block;
+  width: 250px;
+  height: 60px;
+  background-color: #c30d22;
+  margin: 100px auto;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+}
+
+/* -------- Loading -------- */
+.loading{
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

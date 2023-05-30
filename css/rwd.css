@@ -1,0 +1,86 @@
+
+@media screen and (max-width: 428px) {
+  
+  .wrapper{
+    flex-direction: column;
+  }
+
+  nav{
+    flex-direction: row;
+    padding: 0 20px;
+    flex-basis: 60px;
+    justify-content: space-between;
+  }
+
+  .home-logo{
+    margin-bottom: 0;
+  }
+
+  .home-logo img{
+    display: block;
+    width: 40px;
+  }
+
+  .home-user{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+  }
+
+  .main-info p{
+    width: 80%;
+  }
+
+  .powerby{
+    right: 20px;
+  }
+
+  .main-chat{
+    width: 100vw;
+    padding: 0 10px;
+  }
+
+  .main-chat input{
+    padding-right: 60px;
+    height: 50px;
+    box-sizing: border-box;
+  }
+
+  .main-chat i{
+    right: 35px;
+    font-size: 24px;
+    margin-top: 5px;
+  }
+
+  .qu-main, .ans-main{
+    padding: 30px;
+  }
+
+  .playing{
+    margin-left: 30px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
