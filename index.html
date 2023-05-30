@@ -13,20 +13,28 @@
   <link rel="stylesheet" href="css/rwd.css">
   <script>
     // 密碼保護
-    var password = "";
-    var isPasswordCorrect = false;
+    var password = "wavv";
 
-    while (!isPasswordCorrect) {
-      password = prompt("Enter password");
+    checkPassword();
 
-      if (password === "wavv") {
-          isPasswordCorrect = true;
+    function checkPassword() {
+      var storedPassword = sessionStorage.getItem("password");
+      if (storedPassword === password) {
+          // 密碼已經輸入過，讓使用者進入頁面
       } else {
-          alert("Wrong password");
+          var enteredPassword = prompt("請輸入密碼");
+          if (enteredPassword === password) {
+            // 密碼正確，將密碼儲存至 sessionStorage
+            sessionStorage.setItem("password", password);
+          } else {
+            // 密碼錯誤，提示重新輸入
+            alert("密碼錯誤！請重新輸入。");
+            checkPassword();
+          }
       }
     }
 
-    // 密碼正確，不需要執行任何動作，讓使用者進入頁面
+    
   </script>
   <title>Wavv Piano Time</title>
 </head>
