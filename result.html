@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="css/playan.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/rwd.css">
+  <script>
+    var rm = Math.floor(Math.random()*20) + 1;
+    var audio = new Audio('file/Croton_St_' + rm + '.m4a');
+  </script>
   <style>
     .powerby{
       bottom: 30px;
@@ -110,8 +114,6 @@
 <script>
 
   // Audio Play
-  var rm = Math.floor(Math.random()*20) + 1;
-  var audio = new Audio('file/Croton_St_' + rm + '.m4a');
   var playbtn = document.getElementsByClassName('playbtn')[0];
   var player = document.getElementById("music");
 
