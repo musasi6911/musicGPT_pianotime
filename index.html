@@ -22,13 +22,13 @@
       if (storedPassword === password) {
           // 密碼已經輸入過，讓使用者進入頁面
       } else {
-          var enteredPassword = prompt("請輸入密碼");
+          var enteredPassword = prompt("Enter password");
           if (enteredPassword === password) {
             // 密碼正確，將密碼儲存至 sessionStorage
             sessionStorage.setItem("password", password);
           } else {
             // 密碼錯誤，提示重新輸入
-            alert("密碼錯誤！請重新輸入。");
+            alert("Wrong password");
             checkPassword();
           }
       }
