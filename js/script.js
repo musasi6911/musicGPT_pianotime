@@ -1,6 +1,11 @@
 window.onload = function(){
 
-  document.getElementsByTagName('input')[0].addEventListener('keypress', function(event){
+  var passwordVerified = sessionStorage.getItem("passwordVerified");
+  if (passwordVerified === "true") {
+      document.getElementsByClassName('psmask')[0].style.display = 'none';
+  }
+
+  document.getElementById('inputElement').addEventListener('keypress', function(event){
     if(event.key == 'Enter'){
       document.getElementsByClassName('loading')[0].style.opacity = 1;
       setTimeout(function(){
@@ -15,7 +20,6 @@ window.onload = function(){
       window.location.href = 'result.html';
     }, 7000);
   })
-
 
 }
 

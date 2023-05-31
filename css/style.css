@@ -19,6 +19,49 @@ a{
   display: flex;
 }
 
+/* ---------------- Password Mask -------------- */
+.psmask{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.psmask h1{
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.psmask input{
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 24px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.psmask button{
+  width: 210px;
+  height: 40px;
+  background-color: #c30d22;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 /* ---------------- Navigation -------------- */
 nav{
   background-color: #333;

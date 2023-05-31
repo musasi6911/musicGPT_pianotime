@@ -11,34 +11,15 @@
   <link rel="stylesheet" href="css/particles.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/rwd.css">
-  <script>
-    // 密碼保護
-    var password = "wavv";
-
-    checkPassword();
-
-    function checkPassword() {
-      var storedPassword = sessionStorage.getItem("password");
-      if (storedPassword === password) {
-          // 密碼已經輸入過，讓使用者進入頁面
-      } else {
-          var enteredPassword = prompt("Enter password");
-          if (enteredPassword === password) {
-            // 密碼正確，將密碼儲存至 sessionStorage
-            sessionStorage.setItem("password", password);
-          } else {
-            // 密碼錯誤，提示重新輸入
-            alert("Wrong password");
-            checkPassword();
-          }
-      }
-    }
-
-    
-  </script>
   <title>Wavv Piano Time</title>
 </head>
 <body>
+
+  <div class="psmask">
+    <h1>Enter your password</h1>
+    <input type="password" id="passwordInput">
+    <button onclick="checkPassword()">OK</button>
+  </div>
 
   <div class="loading">
     <div class="e-loadholder">
@@ -110,7 +91,20 @@
     localStorage.setItem('userInput', userInput);
   });
 
+  // Password Mask
+  function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    if (password === "wavv") {
+        // 将密码验证状态保存到本地存储
+        sessionStorage.setItem("passwordVerified", "true");
+        document.getElementsByClassName('psmask')[0].style.display = 'none';
+    } else {
+        alert("Wrong password");
+    }
+  }
+
 </script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="js/particles.js"></script>
