@@ -135,6 +135,9 @@
     var outputElement = document.getElementById('outputElement');
     outputElement.textContent = userInput;
   }
+
+  var targetWindow = window.opener || window.parent;
+  targetWindow.postMessage("hideLoading", "http://musasi.vaserver.com/musicGPT_pianotime/index.html");
   
 </script>
 </body>

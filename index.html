@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/particles.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/rwd.css">
+  <link rel="prefetch" href="result.html">
+  <link rel="prerender" href="result.html">
   <title>Wavv Piano Time</title>
 </head>
 <body>
@@ -102,6 +104,18 @@
         alert("Wrong password");
     }
   }
+
+  window.addEventListener('message', function(){
+    var data = event.data;
+    if(data == 'hideLoading'){
+      var loadElement = document.getElementsByClassName('loading')[0];
+      if(loadElement){
+        setTimeout(function(){
+          loadElement.style.opacity = 0;
+        }, 2000);
+      }
+    }
+  })
 
 </script>
 

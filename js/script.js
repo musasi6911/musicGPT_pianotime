@@ -26,3 +26,14 @@ window.onload = function(){
 if(window.innerWidth <= 428){
   $('.playing').children().eq(11).nextAll().css('display', 'none');
 }
+
+
+
+
+
+
+
+
+
+
+
