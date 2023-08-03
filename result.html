@@ -12,8 +12,36 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/rwd.css">
   <script>
-    var rm = Math.floor(Math.random()*20) + 1;
-    var audio = new Audio('file/Croton_St_' + rm + '.m4a');
+    // 從LocalStorage讀取之前出現過的數字
+    var usedNumbers = JSON.parse(localStorage.getItem('usedNumbers')) || [];
+
+    function getRandomUniqueNumber() {
+      // 檢查是否還有未出現過的數字
+      if (usedNumbers.length >= 20) {
+        usedNumbers = []; // 清空陣列，回到初始狀態
+        localStorage.removeItem('usedNumbers'); // 同時也從LocalStorage中刪除該數據
+        return -1; // 或是你可以採取其他處理方式
+      }
+
+      var randomNumber;
+      do {
+        // 產生隨機數字
+        randomNumber = Math.floor(Math.random() * 20) + 1;
+      } while (usedNumbers.includes(randomNumber)); // 檢查該數字是否已經出現過
+
+      // 將新的數字加入陣列中
+      usedNumbers.push(randomNumber);
+      // 將更新後的陣列存回LocalStorage
+      localStorage.setItem('usedNumbers', JSON.stringify(usedNumbers));
+
+      return randomNumber;
+    }
+
+    var rm = getRandomUniqueNumber();
+    if (rm !== -1) {
+      var audio = new Audio('file/Croton_St_' + rm + '.m4a');
+      // 接下來你可以使用該音訊檔案進行其他操作
+    }
   </script>
   <style>
     .powerby{
